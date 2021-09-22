@@ -1,56 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
-*{
-    margin: 0;
+*{  margin: 0;
     padding: 0;
     font-family: 'Lato';
 }
 
-body{
+.container {
 
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 200px, 1fr;
+    grid-template-rows: auto;
     grid-template-areas: 
-       "header header"
-       "aside main"
-       "footer footer";
+    
+        'header header'
+       'aside main'
+       'footer footer';
 }
 
-header{
-    background-color: #585758;
-    grid-area: header;
-   text-align:center;
-    height: 15vh;
+.header{
+  grid-area: header;
+  background-color: navy;
 }
+.main{
 
-aside{
-    background-color: #1f251f;
-    grid-area: aside;
+  grid-area: main;
+  background-color: brown;
 }
-
-ul{
-    text-align: center;
-    list-style: none;
-    font-size: 2rem;
-    padding-top: 2rem;
-
+.aside{
+  grid-area: aside;
+  background-color: black;
+  margin:  5px;
+  padding-left: 0fr;
 }
-main{
-    background-color: #1f291d;
-    grid-area: main;
-    height: 75vh;
-    text-align: center;
-
-}
-img{
-    width: 800px;
-}
-footer{
-    background-color: #333333;
-    grid-area: footer;
-    height: 10vh;
-    text-align:center;
-}
-div {
-    margin-top: 2rem 
+.footer{
+  grid-area: footer;
+  background-color: yellow;
 }
